@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+
+a{
+  color:white;
+}
+
+
+// #navbarNavDropdown > ul > li.fas.fa-home.nav-link.text-light > a:nth-child(2){
+//   color:white;
+// }
+// .text-light a{
+//   color:white;
+// }
+// body > header > nav > nav > a{
+//   color:white;
+// }
