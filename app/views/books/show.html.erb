@@ -1,18 +1,23 @@
 <div class="container">
   <div class="row">
-    <%= render 'users/left', user: @user, book: @book %>
+    <%= render 'users/left', user: @user, book: @book_new %>
     <div class='col-md-8 offset-md-1'>
   		<h2>Book detail</h2>
   		<table class='table'>
   		  <tr>
           <td>
             <%= attachment_image_tag @user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg"%>
-            <%= @user.name %>
+            <br>
+            <%=link_to @user.name, user_path(@user) %>
           </td>
           <td><%= @book.title %></td>
           <td><%= @book.body %></td>
+          
+           <% if @user.id == current_user.id %>
           <td><%= link_to 'Edit', root_path,class: "btn btn-small btn-success" %></td>
-          <td><%= link_to 'Destroy', book_path(@book), method: :delete %></td>
+          <td><%= link_to 'Destroy', book_path(@book), method: :delete, class: "btn btn-small btn-danger"  %></td>
+           <% end %>
+           
         </tr>
       </table>
     </div>

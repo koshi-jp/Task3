@@ -20,7 +20,8 @@
 
             <div class='row'>
                <% if @user.id == current_user.id %>
-                 <%= link_to edit_user_path(@user)do %> <i class= "fas fa-user-cog btn btn-outline-secondary btn-block"></i>
+                 <%= link_to edit_user_path(@user), class: 'btn btn-outline-secondary btn-block' do %> 
+                 <i class= "fas fa-user-cog"></i>
                <% end %>
                <% end %>
             </div>
