@@ -10,13 +10,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @books= @user.books
     @book = Book.new
-    puts "======================"
-    p @user
-    puts "======================"
-    p @user.books
-    puts "======================"
-    p @user.books.count
-    puts "======================"
+
   end
 
   def edit

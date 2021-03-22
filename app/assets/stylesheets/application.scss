@@ -15,9 +15,7 @@
  */
  @import "bootstrap";
 
-a{
-  color:white;
-}
+
 
 
 // #navbarNavDropdown > ul > li.fas.fa-home.nav-link.text-light > a:nth-child(2){
@@ -26,6 +24,28 @@ a{
 // .text-light a{
 //   color:white;
 // }
-// body > header > nav > nav > a{
-//   color:white;
-// }
+ #navbarNavDropdown > ul > li:nth-child(5) > a{
+   color:white;
+ }
+body > header > nav > nav > a{
+   color:white;
+ }
+
+#navbarNavDropdown > ul > li.fas.fa-home.nav-link.text-light > a:nth-child(2){
+   color:white;
+ }
+
+#navbarNavDropdown > ul > li:nth-child(3) > a{
+   color:white;
+ }
+
+#navbarNavDropdown > ul > li:nth-child(4) > a{
+   color:white;
+ }
+
+ body > main > div > div > div:nth-child(1) > div > a{
+   color:white;
+ }
+ body > main > div > div > div:nth-child(2) > div > a{
+   color:white;
+ }
