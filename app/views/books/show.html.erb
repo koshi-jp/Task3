@@ -1,8 +1,14 @@
-<div class='col-md-8 offset-md-1'>
+<div class="container">
+  <div class="row">
+    <%= render 'users/left', user: @user, book: @book %>
+    <div class='col-md-8 offset-md-1'>
   		<h2>Book detail</h2>
   		<table class='table'>
   		  <tr>
-          <td>画像<br>と名前</td>
+          <td>
+            <%= attachment_image_tag @user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg"%>
+            <%= @user.name %>
+          </td>
           <td><%= @book.title %></td>
           <td><%= @book.body %></td>
           <td><%= link_to 'Edit', root_path,class: "btn btn-small btn-success" %></td>
@@ -10,3 +16,5 @@
         </tr>
       </table>
     </div>
+  </div>
+</div>

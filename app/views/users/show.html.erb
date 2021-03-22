@@ -1,6 +1,6 @@
 <main>
-  <div class="container">  
-  <div class="row">      
+  <div class="container">
+  <div class="row">
     <%= render 'users/left', user: @user, book: @book %>
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
@@ -15,12 +15,12 @@
       </thead>
 
       <tbody>
-        <% @books.each do |book| %>
+        <% @user.books.each do |book| %>
          <tr>
           <td></td>
-          <td><%= book.title, %></td>
+          <td><%= book.title %></td>
           <td><%= book.body %></td>
-          <td><%= link_to 'Edit', root_path,class: "btn btn-small btn-success" %></td>
+          <td><%= link_to 'Edit', book_path(book),class: "btn btn-small btn-success" %></td>
           <td><%= link_to 'Destroy', book_path(book),method: :delete,class: "btn btn-small btn-danger" %></td>
          </tr>
 
