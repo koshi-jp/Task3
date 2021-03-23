@@ -1,10 +1,5 @@
-<main>
-  <% if flash[:notice] %>
-    <div class="flash">
-      <%= flash[:notice] %>
-    </div>
-  <% end %>
-  
+  <%= flash[:notice] %>
+      
   <div class="container">
   <div class="row">
     <%= render 'users/left', user: @user, book: @book %>
@@ -33,4 +28,3 @@
     </div>
     </div>
   </div>
-</main>

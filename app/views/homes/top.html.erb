@@ -10,13 +10,21 @@
       <br>
       <p>about various books!</p>
     <div class="row">
-      <div class="btn btn-info btn-sm btn-block mb-3 sign_in">
-        <%= link_to "Log in", user_session_path %>
-      </div>
+     
+        <%= link_to  user_session_path, class: "col-12" do %>
+          <div class="btn btn-info btn-sm btn-block mb-3 sign_in">
+            <span>Sign in</span>
+          </div>
+        <% end %>
       </div>
       <div class="row">
-        <div class="btn btn-success btn-sm btn-block mb-3 sign_in">
-          <%= link_to "Sign Up", new_user_registration_path %>
+        
+        <%= link_to  new_user_registration_path, class: "col-12" do %>
+          <div class="btn btn-success btn-sm btn-block mb-3 sign_in">
+            <span>Sign up</span>
+          </div>
+        <% end %>
+          
         </div>
       </div>
     </div>
