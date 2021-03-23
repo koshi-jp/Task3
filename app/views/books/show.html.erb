@@ -1,12 +1,15 @@
 <div class="container">
   <div class="row">
+    
     <%= render 'users/left', user: @user, book: @book_new %>
     <div class='col-md-8 offset-md-1'>
+      
+      
   		<h2>Book detail</h2>
   		<table class='table'>
   		  <tr>
           <td>
-            <%= attachment_image_tag @user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg"%>
+            <%= attachment_image_tag @user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg", size:'40x40' %>
             <br>
             <%=link_to @user.name, user_path(@user) %>
           </td>
