@@ -1,6 +1,12 @@
+<% if flash[:notice] %>
+  <div class="flash">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <div class="container">
+  
   <div class="row">
-    
     <%= render 'users/left', user: @user, book: @book_new %>
     <div class='col-md-8 offset-md-1'>
       
@@ -17,7 +23,7 @@
           <td><%= @book.body %></td>
           
            <% if @user.id == current_user.id %>
-          <td><%= link_to 'Edit', root_path,class: "btn btn-small btn-success" %></td>
+          <td><%= link_to 'Edit', edit_book_path(@book),class: "btn btn-small btn-success" %></td>
           <td><%= link_to 'Destroy', book_path(@book), method: :delete, class: "btn btn-small btn-danger"  %></td>
            <% end %>
            

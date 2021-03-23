@@ -1,4 +1,10 @@
 <main>
+  <% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  
   <div class="container">
   <div class="row">
     <%= render 'users/left', user: @user, book: @book %>
