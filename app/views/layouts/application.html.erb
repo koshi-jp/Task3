@@ -22,7 +22,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-         <a class="col-lg-1">
             <li class="fas fa-home nav-link text-light">
               <%= link_to "Home", user_path(current_user) %>
             </li>
@@ -35,9 +34,8 @@
             <li class="fas fa-sign-out-alt nav-link text-light">
               <%= link_to "logout", destroy_user_session_path,method: :delete  %>
             </li>
-          </a>
-        </ulz>
-       </div>
+          </div>
+        </ul>
 　　</nav>
   </header>
     
@@ -52,21 +50,19 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-         <a class="col-lg-1">
             <li class="fas fa-home nav-link text-light">
               <%= link_to "Home", root_path %>
             </li>
             <li class="fas fa-link nav-link text-light">
-              <%= link_to "About", about_path %>
+              <%= link_to "About", home_about_path %>
             </li>
             <li class="fas fa-user-plus nav-link text-light">
               <%= link_to "sign up", new_user_registration_path %>
             </li>
             <li class="fas fa-sign-in-alt nav-link text-light">
-              <%= link_to "login", user_session_path %>
+              <%= link_to "login", new_user_session_path %>
             </li>
-          </a>
-        </ulz>
+        </ul>
        </div>
        <%= flash[:notice] %>
       <% end %>
