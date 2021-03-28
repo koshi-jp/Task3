@@ -36,7 +36,7 @@ class BooksController < ApplicationController
     unless current_user == @book.user
     redirect_to books_path
     end
-    # book.update(book_params)
+    
     
   end
 
